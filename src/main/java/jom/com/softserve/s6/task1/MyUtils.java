@@ -4,6 +4,9 @@ import java.time.LocalDate;
 
 public class MyUtils {
 
-    //Write your code here
+    public static boolean isLeapYear(int year) {
+        var date = LocalDate.ofYearDay(year, 1);
+        return date.isLeapYear();
+    }
 
 }
