@@ -6,7 +6,11 @@ import java.util.Arrays;
 
 public class MyUtils {
     public static String getDateAfterToday(int years, int months, int days) {
-        //Write code there
-        return "";
+        var futureDate = LocalDate
+                .now()
+                .plusYears(years)
+                .plusMonths(months)
+                .plusDays(days);
+        return futureDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
     }
 }
